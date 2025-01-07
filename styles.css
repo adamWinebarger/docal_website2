@@ -5,3 +5,41 @@
   /* color: #000000; */
 
 }
+
+.parralax {
+  background-image: url("./images/IMG_8722.webp");
+  height:100vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  overflow:hidden;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
+
+.welcome-content {
+  background: rgba(0, 0, 0, 0.5); /* Optional dark overlay */
+  padding: 20px;
+  border-radius: 10px;
+  margin: 15px;
+}
+
+
+.content {
+  background-color: white;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+ul {
+  text-align:left;
+}
+
+li {
+  padding:5px;
+  vertical-alignment: center;
+}
