@@ -3,7 +3,10 @@
 .navbarText {
   font-size: 16pt;
   /* color: #000000; */
+}
 
+.navbar {
+  z-index: 1050;
 }
 
 .parralax {
