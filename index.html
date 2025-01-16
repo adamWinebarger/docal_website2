@@ -50,7 +50,7 @@
         <h3>Now with Chicken</h3>
       </div>
     </section>
-    <section class="content">
+    <section class="content" style="padding-bottom:0">
       <br>
       <!-- This will be the row with the profile picture and stufff-->
       <div class="row" style="padding:50px;height:120%">
@@ -97,13 +97,15 @@
             </div>
           </div> -->
         </div>
-
+      </div>
+      <div class="row bg-primary text-white" style="padding-top:75px;padding-left:25px;margin:0 -50px">
+          <h3 style="text-align:left;padding-left:25px;">My Background:</h3>
       </div>
       <!-- End of row -->
       <!-- Let's just do a whole row for background. There's kind of a lot of information density here and it might look a bit cleaner that way-->
-      <div class="row" style="padding-top:20px">
-        <h3 style="text-align:left">My Background:</h3>
-        <div class="row" style="padding-top:20px">
+      <div class="row" style="padding-top:0px">
+        <!-- <h3 style="text-align:left">My Background:</h3> -->
+        <div class="row" style="padding-top:0">
           <div class="col-md" style="padding-top:20px">
             <div class="card bg-info text-white mb3" style="height:100%">
               <div class="card-header">Degrees</div>
@@ -132,12 +134,13 @@
           </div>
           <div class="col-md" style="padding-top:20px">
             <div class="card bg-warning mb3" style="height:100%">
-              <div class="card-header">Places I've Been to</div>
+              <div class="card-header">Locations Visited</div>
               <div class="card-body">
                 <ul>
                     <li>Mexico</li>
                     <li>Canada</li>
                     <li>Peru?</li>
+                    <li>The Library</li>
                 </ul>
               </div>
             </div>
@@ -146,45 +149,140 @@
       </div>
       <!-- End of Row -->
 
+      <!-- We may as well merge the books and apps section for this first main part, I guess... I'm not really sure but we'll role with it for now-->
       <div class="row bg-dark text-white" style=";margin: 25px -50px;padding:20px">
-        <h1>What the hell are we putting here?</h>
-      </div>
-
-      <!-- This will probably be the section that has like his books and apps and stuff... or we may push that down another row. Idk -->
-      <div class="row">
-        <div class="col-md" style="padding-top:25px">
-          <div class="card text-white bg-danger">
-            <div class="card-header">Books</div>
-            <div class="card-body" style="padding-left:25px;padding-right:25px;">
-              <ul style="text-align:left;">
-                <li>Parenting Kids with ADD/ADHD: Real Tools For Real Life</li>
-                <li>ADD/ADHD Social Skills for Kids</li>
-                <li>Choosing A Therapist: A Practical Guide to the House of Mirrors</li>
-                <li>Clinical Psychology: Something Something Something Something Something</li>
-              </ul>
+        <h1>Dr. Al's Books</h1>
+        <div class="row" style="padding-top:25px">
+          <div class="col-md" style="padding-left:50px;padding-right:50px;padding-bottom:25px">
+            <div class="card bg-dark border-primary text-white mb3" style="padding-bottom:20px">
+              <div class="card-header border-primary" style="text-align:left;padding-left:4%;font-weight:bold">Dr. Al's Books</div>
+              <div class="card-body">
+                <p>Dr. Al has written a number or good and award winning books designed to give real people the real tools they need in their real lives. These include:</p>
+                <ul>
+                  <li>Parenting Kids with ADD/ADHD: Real Tools For Real Life</li>
+                  <li>ADD/ADHD Social Skills for Kids</li>
+                  <li>Choosing A Therapist: A Practical Guide to the House of Mirrors</li>
+                  <li>Clinical Psychology: Something Something Something Something Something</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6" style="padding:50px;">
+            <div class="row">
+              <div class="col-6 col-sm-6">
+                <img src="./images/parentingkids1.webp" alt="" class="book-cover-image img-fluid"/>
+              </div>
+              <div class="col-6 col-sm-6">
+                <img src="./images/adhd2.webp" alt="" class="book-cover-image img-fluid"/>
+              </div>
+            </div>
+            <div class="row" style="padding-top:calc(var(--bs-gutter-x));">
+              <div class="col-6 col-sm-6">
+                <img src="./images/choosingTherapist3.webp" alt="" class="book-cover-image img-fluid"/>
+              </div>
+              <div class="col-6 col-sm-6">
+                <img src="./images/clinicalpsychology4.webp" class="book-cover-image img-fluid"/>
+              </div>
             </div>
           </div>
         </div>
-        <div class="col-md" style="padding:25px">
-          <div class="card text-white bg-info" style="height:100%">
-              <div class="card-header">Apps</div>
-              <div class="card-body">
-                <ul>
-                  <li>Dr. Al's Parenting Tips & Tools</li>
-                  <li>Dr. Al's Sh.I.F.T. (Sharing Information between Families & Teachers)</li>
-                </ul>
-              </div>
-          </div>
-        </div>
-        <div class="col-md">
+      </div>
+      <!-- End of that Books Row -->
 
+      <!-- I guess let's just give apps their own row and... We can figure it out as we go. -->
+      <div class="row">
+        <h2>Apps and More</h2>
+        <div class="row" style="padding-top:0">
+          <div class="col-md" style="padding-top:25px">
+            <div class="card bg-danger text-white" style="height:100%">
+              <div class="card-header">Parenting Tips & Tools</div>
+              <div class="card-body" style="padding:20px">
+                <p>Get expert parenting guidance from Dr. Al Winebarger! This app provides the same proven handouts he uses in practice, offering the same strategies to boost self-esteem, manage ADD/ADHD, reduce family stress, and more. Helpful links and resources are also included.</p>
+                <br><br><br>
+                <p>Click this card to learn more.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md" style="padding-top:25px">
+            <div class="card bg-info text-white" style="height:100%">
+              <div class="card-header">Dr. Al's ShIFT</div>
+              <div class="card-body">
+                <p>Dr. Al's ShIFT (Sharing Information between Families and Teachers) empowers parents, teachers, and caregivers to collaborate effectively by sharing observations and completing tailored questionnaires about a child’s behavior throughout the day. Designed to foster better communication and understanding, ShIFT helps build a comprehensive view of a child’s progress by capturing insights from both home and school environments.</p>
+                <p>Click this card to learn more.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md" style="padding-top:25px">
+            <div class="card bg-success text-white" style="height:100%">
+              <div class="card-header">Adventures of Wanderin' Jack (Coming Soon)</div>
+              <div class="card-body">
+                <p>Inspired by the text-based games of yesteryear, <i>The Adventures of Wanderin' Jack</i> is a story-driven game designed to help kids with ADD/ADHD navigate real-life situations. This work of interactive fiction combines engaging dialogue, decision-making, and visuals to guide players through scenarios that teach self-regulation and problem-solving. <i><b>Coming Soon!</b></i></p>
+                <br>
+                <p>Click this card to learn more.</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <!-- End of row -->
+      <div class="row bg-primary text-white" style="margin-top:100px;margin-left:-50px;margin-right:-50px;padding:0 25px">
+        <h3 style="margin-bottom:0;margin-top:25px">What are  you waiting for? Get in touch!</h3>
+        <div class="row" style="padding:25px">
+          <div class="col-md">
+            <br><br>
+            <div class="card bg-dark text-white border-light">
+              <div class="card-header border-light">We'd love to hear from you</div>
+              <div class="card-body" style="padding:25px">
+                <p>Whether you have questions about our services, feedback on our apps, or want to learn more about how we can help, we’re here to connect. Reach out using the form, and we’ll get back to you as soon as we can!</p>
+                <br>
+                <ul>
+                    <li>Phone Number: <a class="dark-hover-a-tags" href="tel:+16168444140">(616) 844-4140</a></li>
+                    <li>Email: <a class="dark-hover-a-tags" href="">test@test.com</a></li>
+                </ul>
+                <br>
+                <p>If you are a new patient, feel free to <a class="intake-a-tag" style="text-decoration:underline" href="">download our intake form</a> and bring it in for your first appointment. We would greatly appreciate it!</p>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-md" style="padding-top:25px">
+            <h5>Feel free to reach out</h5>
+
+            <form class="" id="contact-form" action="" method="post" style="text-align:left;margin:4%">
+              <div>
+                <label class="form-label text-white" for="name">Name:</label>
+                <input type="text" class="form-control" id="name" name="name" required placeholder="Enter Your Name:">
+              </div>
+              <br>
+              <div>
+                <label class="form-label text-white" for="email">Email:</label>
+                <input type="text" class="form-control" id="email" name="email" required placeholder="Your email Here">
+              </div>
+              <br>
+              <div>
+                  <label class="form-label text-white" for="subject">Subject</label>
+                  <input type="text" class="form-control" id="subject" name="subject" required placeholder="Subject">
+              </div>
+              <br>
+              <div>
+                  <label class="form-label text-white" for="body">Message:</label>
+                  <textarea class="form-control" id="body" name="body" required placeholder="Your Message Here" style="height:200px"></textarea>
+              </div>
+              <div class="row" style="text-align:center; padding:25px">
+                  <div class="col" style="padding-top:10px">
+                    <button type="submit" class="btn btn-dark text-white" style="width:175px">Submit</button>
+                  </div>
+                  <div class="col" style="padding-top:10px">
+                    <button type="submit" class="btn btn-dark text-white" style="width:175px">Open in email</button>
+                  </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <br><br><br><br><br>
+      </div>
+      <!-- End of Row -->
 
     </section>
-
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-
   </body>
 </html>

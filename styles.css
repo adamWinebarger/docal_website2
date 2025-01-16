@@ -24,6 +24,20 @@
   text-align: center;
 }
 
+.mini-parralax {
+  /* background-image:url('./images/IMG_2625.JPG'); */
+  height:100vh;
+  background-image:url('./images/shapeimage_1.webp');
+  display: flex;
+  overflow: hidden;
+  justify-content:center;
+  align-items: center;
+  background-size:cover;
+  background-attachment:fixed;
+  background-position:center
+
+}
+
 .welcome-content {
   background: rgba(0, 0, 0, 0.5); /* Optional dark overlay */
   padding: 20px;
@@ -38,11 +52,39 @@
   text-align: center;
 }
 
+.book-cover-image {
+  /* width:100%; */
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.dark-hover-a-tags {
+  color: #ffffff;
+  text-decoration:none;
+  tranisiton: color 0.3s ease;
+}
+
+.dark-hover-a-tags:hover {
+  color: #ff6a13;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.intake-a-tag {
+  color: #ffffff;
+  tranisiton: color 0.3s ease;
+}
+
+.intake-a-tag:hover {
+  color: #ff6a13;
+}
+
 ul {
   text-align:left;
 }
 
 li {
   padding:5px;
-  vertical-alignment: center;
+  /* vertical-alignment: center; */
 }
