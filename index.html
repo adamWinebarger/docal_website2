@@ -199,7 +199,7 @@
               <div class="card-body" style="padding:20px">
                 <p>Get expert parenting guidance from Dr. Al Winebarger! This app provides the same proven handouts he uses in practice, offering the same strategies to boost self-esteem, manage ADD/ADHD, reduce family stress, and more. Helpful links and resources are also included.</p>
                 <br><br><br>
-                <p>Click this card to learn more.</p>
+                <a class="card-a-tag" href="./apps/parenting-tips.html">Click this card to learn more.</a>
               </div>
             </div>
           </div>
@@ -273,7 +273,7 @@
                     <button type="submit" class="btn btn-dark text-white" style="width:175px">Submit</button>
                   </div>
                   <div class="col" style="padding-top:10px">
-                    <button type="submit" class="btn btn-dark text-white" style="width:175px">Open in email</button>
+                    <button type="button" onclick="openInEmail()" class="btn btn-dark text-white" style="width:175px">Open in email</button>
                   </div>
               </div>
             </form>
@@ -282,7 +282,41 @@
         <br><br><br><br><br>
       </div>
       <!-- End of Row -->
-
     </section>
+    <script>
+      function openInEmail() {
+        let email = "clinpsysoffice@gmail.com" //Will we want to put an attentiondoc email here or something?
+        let subject = (document.getElementById('subject').value.length) > 0 ? document.getElementById('subject').value : "Questions about your services"
+        let mail2Link = `mailto:${encodeURIComponent(email)}?subject=${encodeURIComponent(subject)}`
+        window.location.href = mail2Link
+        console.log("Test")
+      }
+
+      /*I guess we'll do driver code right here*/
+      document.getElementById('contact-form').addEventListener('submit', function(event) {
+        event.preventDefault() //Prevents default form submission
+
+        let formData = new FormData(document.getElementById('contact-form'))
+
+        //alert("Submit Clicked")
+        fetch('send-email.php', {
+          method: 'POST',
+          body: formData
+        })
+        .then(response => response.text())
+        .then(data => {
+          if (data.trim() === 'true') {
+            alert("Your message was sent successfully!")
+          } else {
+            alert("Failed to send your message. Please try again");
+            console.log(`Failure Message: ${data.trim()}`)
+          }
+        })
+        .catch(error => {
+          alert("An error occured: Please check your console")
+          console.error("Error: ", error)
+        })
+      })
+    </script>
   </body>
 </html>

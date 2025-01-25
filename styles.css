@@ -62,7 +62,7 @@
 .dark-hover-a-tags {
   color: #ffffff;
   text-decoration:none;
-  tranisiton: color 0.3s ease;
+  transiton: color 0.3s ease;
 }
 
 .dark-hover-a-tags:hover {
@@ -73,11 +73,22 @@
 
 .intake-a-tag {
   color: #ffffff;
-  tranisiton: color 0.3s ease;
+  transiton: color 0.3s ease;
 }
 
 .intake-a-tag:hover {
   color: #ff6a13;
+}
+
+.card-a-tag {
+  color: #ffffff;
+  text-decoration:underline;
+  transition: color 0.3s ease;
+}
+
+.card-a-tag:hover {
+  font-weight: bold;
+
 }
 
 ul {
