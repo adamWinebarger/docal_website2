@@ -99,3 +99,7 @@ li {
   padding:5px;
   /* vertical-alignment: center; */
 }
+
+div {
+  scroll-margin-top: 8em;
+}

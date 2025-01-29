@@ -12,8 +12,8 @@ const sliderEl = document.querySelector(".blaze-slider");
       const blazeSlider = new BlazeSlider(sliderEl, {
         all: {
           enableAutoplay: true,
-          slidesToScroll: 3,
-          slidesToShow: 3,
+          slidesToScroll: 1,
+          slidesToShow: 1,
           transitionDuration: 700,
           autoplayInterval: 5000,
           loop: true,

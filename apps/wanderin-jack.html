@@ -2,9 +2,108 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://bootswatch.com/5/united/bootstrap.css">
+    <link rel="stylesheet" href="https://bootswatch.com/_vendor/bootstrap-icons/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://bootswatch.com/_vendor/prismjs/themes/prism-okaidia.css">
+    <link rel="stylesheet" href="https://bootswatch.com/_assets/css/custom.min.css">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="./blaze.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/blaze-slider@1.9.1/dist/blaze.css"/>
 
+    <title>Dr. Al's ShIFT</title>
+  </head>
+  <body class="bg-dark text-white">
+    <header style="background-color: white; height: 70px; position: fixed; top: 0; width: 100%; z-index: 1000;"></header>
+    <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark" style="margin-top:-50px;position:fixed;top=75px;width:100%;"/>
+      <div class="container-fluid">
+        <a class="navbar-brand navbarText" href="#">Dr. Al</a>
+        <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="toggle-navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarColor01">
+          <ul class="navbar-nav ms-auto" style="padding-right:1%">
+            <li class="nav-item">
+                <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="docal">Dr. Al</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="books">Books</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="apps">Apps</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="appt">Book an Appointment!</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- So I guess this will be the main content section -->
+    <div class="row" style="padding:25px;">
+      <div class="col-md" style="padding:25px ">
+        <h2 style="text-align:center">Dr. Al's ShIFT</h2>
+        <h5 style="text-align:center;padding-top:10px">Sharing Information between Families & Teachers</h5>
+        <br>
+        <div class="card bg-dark border-primary text-white" id="description-card">
+          <div class="card-header bg-primary border-primary">
+            <br>
+          </div>
+          <div class="card-body" style="padding:25px 50px">
+            <p>Inspired by the text-based games of yesteryear, <i>The Adventures of Wanderin' Jack</i> is a story-driven game designed to help kids with ADD/ADHD navigate real-life situations. This work of interactive fiction combines engaging dialogue, decision-making, and visuals to guide players through scenarios that teach self-regulation and problem-solving. <i><b>Coming Soon!</b></i></p>
+            <p><u>So what exactly <i>is</i> Wanderin' Jack?</u></p>
+            <ul>
+              <li>Wanderin' Jack is a text-based "adventure" game which aims to walk kids with ADD/ADHD through common real-life situations</li>
+              <li>Through... visuals... and humor, <i>The Adventures of Wanderin' Jack</i> aims to serve as a sort of "practice run" to help kids navigate through everyday situations</li>
+              <li><i>Wanderin' Jack</i> also has a third quality. But we can't talk about it here because I don't know what it is.</li>
+            </ul>
+            <p>Be sure to check back regularly for the latest news about <i>The adventures of Wanderin' Jack</i>!</p>
+          </div>
+        </div>
+      </div>
+      <!-- End of column -->
+      <div class="col-md bg-light" style="padding:10px 0;margin-top:125px;margin-right:-40px;width:100%%;border-radius:6px">
+        <div class="blaze-slider" style="padding:0">
+          <div class="blaze-container">
+            <div class="blaze-track-container">
+              <div class="blaze-track" style="padding:10%">
+                <div class="">
+                  <img src="../images/wanderin-jack/preview1.png" alt="" style="max-width:100%;height:auto">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="controls">
+            <!-- <button class="blaze-prev">prev</button>
+            <div class="blaze-pagination"></div>
+            <button class="blaze-next">next</button> -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End of row -->
+    <script type="text/javascript" src="https://unpkg.com/blaze-slider@1.9.1/dist/blaze-slider.min.js"></script>
+    <script type="text/javascript" src="./slider.js"></script>
+    <script type="text/javascript">
+    //Listener for grabbing the height of the card on the left side and setting the screenshot heights to be equal to that
+    window.addEventListener('load', function() {
+      const referenceCard = document.getElementById('description-card')
+      //const referenceHeight = referenceCard.offsetHeight
+
+      //Now we need all of the images in the slider
+      const sliderImages = document.querySelectorAll('.blaze-slider img')
+      sliderImages.forEach((img) => {
+        //img.style.height = `${referenceHeight}px`
+      })
+    })
+
+    //Since we don't have to make calls for the images dynamically, I think our initialization of the blaze slider should be a bit simpler
+    const el = document.querySelector('.blaze-slider')
+    new BlazeSlider(el)
+
+    </script>
   </body>
 </html>
