@@ -13,7 +13,7 @@
   <body>
     <!-- Nav bar -->
     <header style="background-color: white; height: 70px; position: fixed; top: 0; width: 100%; z-index: 1000;"></header>
-    <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark" style="margin-top:-50px;position:fixed;top=75px;width:100%;"/>
+    <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark" style="margin-top:-50px;position:fixed;width:100%;">
       <div class="container-fluid">
         <a class="navbar-brand navbarText" href="#">Dr. Al</a>
         <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="toggle-navigation">
@@ -30,8 +30,16 @@
             <li class="nav-item">
                 <a class="nav-link" href="#books">Books</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#apps">Apps</a>
+            <li class="nav-item dropdown d-flex align-items-center">
+                <a class="nav-link" role="buttton" href="#apps" style="padding-right:1px;">Apps</a>
+                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" role="button" style="padding-left:0;">
+                    <span class="dropdown-arrow"></span>
+                </a>
+                <div class="dropdown-menu" data-bs-popper="static">
+                  <a class="dropdown-item" href="./apps/parenting-tips.html">Parenting Tips & Tools</a>
+                  <a class="dropdown-item" href="./apps/shift.html">Dr. Al's ShIFT</a>
+                  <a class="dropdown-item" href="./apps/wanderin-jack.html">Adventures of Wanderin' Jack</a>
+                </div>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#contact">Book an Appointment!</a>
@@ -283,6 +291,7 @@
       </div>
       <!-- End of Row -->
     </section>
+    <script src="https://bootswatch.com/_vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script>
       function openInEmail() {
         let email = "clinpsysoffice@gmail.com" //Will we want to put an attentiondoc email here or something?
