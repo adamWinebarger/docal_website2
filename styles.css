@@ -10,13 +10,19 @@
 }
 
 .parralax {
-  background-image: url("./images/IMG_8722.webp");
-  height:100vh;
+  background-image: url("./images/IMG_0863.webp");
+  /* height:100vh; */
+  /* min-height:500px; */
+  /* min-height: 100%; */
+  /* xwidth:100%; */
+  min-height:100vh;
+  position: relative;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
+  flex-direction: column;
   overflow:hidden;
   justify-content: center;
   align-items: center;
@@ -36,6 +42,13 @@
   background-attachment:fixed;
   background-position:center
 
+}
+
+@media only screen and (max-device-width: 1366px) {
+  .parralax {
+    background-attachment: scroll;
+
+  }
 }
 
 .welcome-content {
