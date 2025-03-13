@@ -55,7 +55,7 @@
     <!-- Start of the homepage -->
     <!-- <img src="./images/IMG_8722.webp" style="width:140%"/> -->
     <section class="parralax">
-      <div class="welcome-content">
+      <div class="welcome-content" style="max-width:80%">
         <h1>Dr. Al Winebarger, Clinical Psychologist</h1>
         <br>
         <h3>Serving Grand Haven for Over 30 Years</h3>
@@ -267,10 +267,10 @@
       <div id="contact" class="row bg-primary text-white" style="margin-top:100px;margin-left:-50px;margin-right:-50px;padding:0 25px">
         <h3 style="margin-bottom:0;margin-top:25px">What are  you waiting for? Get in touch!</h3>
         <div class="row" style="padding:25px">
-          <div class="col-md">
-            <br><br>
-            <div class="card bg-dark text-white border-light">
-              <div class="card-header border-light">We'd love to hear from you</div>
+          <div class="col-md" style="padding-top:25px" height="100%">
+            <!-- <br><br> -->
+            <div class="card bg-dark text-white border-light d-flex h-100">
+              <div class="card-header border-light"><h5>We'd love to hear from you</h5></div>
               <div class="card-body" style="padding:25px">
                 <p style="text-align:left">Whether you have questions about our services, feedback on our apps, or want to learn more about how we can help, we’re here to connect. Reach out using the form, and we’ll get back to you as soon as we can!</p>
                 <br>
@@ -283,10 +283,10 @@
                 <br>
                 <ul>
                     <li>
-                        <a class="dark-hover-a-tags" style="text-decoration:underline" href="">download adult intake form</a>
+                        <a class="dark-hover-a-tags" style="text-decoration:underline" download="./intake_documents/Initial Adult Paperwork Updated 8_27_24-2.pdf">download adult intake form</a>
                     </li>
                     <li>
-                        <a class="dark-hover-a-tags" style="text-decoration:underline" href="">download child intake form</a>
+                        <a class="dark-hover-a-tags" style="text-decoration:underline" download="./intake_documents/Initial Child Paperwork Updated 8_27_24.pdf">download child intake form</a>
                     </li>
                 </ul>
               </div>
@@ -294,38 +294,43 @@
 
           </div>
           <div class="col-md" style="padding-top:25px">
-            <h5>Feel free to reach out</h5>
 
-            <form class="" id="contact-form" action="" method="post" style="text-align:left;margin:4%">
-              <div>
-                <label class="form-label text-white" for="name">Name:</label>
-                <input type="text" class="form-control" id="name" name="name" required placeholder="Enter Your Name:">
+
+            <div class="card border-dark bg-primary">
+              <div class="card-header border-dark text-white">
+                <h5>Feel free to reach out</h5>
               </div>
-              <br>
-              <div>
-                <label class="form-label text-white" for="email">Email:</label>
-                <input type="text" class="form-control" id="email" name="email" required placeholder="Your email Here">
-              </div>
-              <br>
-              <div>
-                  <label class="form-label text-white" for="subject">Subject</label>
-                  <input type="text" class="form-control" id="subject" name="subject" required placeholder="Subject">
-              </div>
-              <br>
-              <div>
-                  <label class="form-label text-white" for="body">Message:</label>
-                  <textarea class="form-control" id="body" name="body" required placeholder="Your Message Here" style="height:200px"></textarea>
-              </div>
-              <div id="submitRow" class="row" style="text-align:center; padding:25px">
-                  <div class="col" style="padding-top:10px">
-                    <button id="submitButton" type="submit" class="btn btn-dark text-white" style="width:175px">Submit</button>
-                  </div>
-                  <div class="col" style="padding-top:10px">
-                    <button type="button" onclick="openInEmail()" class="btn btn-dark text-white" style="width:175px">Open in email</button>
-                  </div>
-              </div>
-              <p id="submitMessage" style="text-align:center;padding-top:20px"></p>
-            </form>
+              <form class="" id="contact-form" action="" method="post" style="text-align:left;margin:4%">
+                <div>
+                  <label class="form-label text-white" for="name">Name:</label>
+                  <input type="text" class="form-control" id="name" name="name" required placeholder="Enter Your Name:">
+                </div>
+                <br>
+                <div>
+                  <label class="form-label text-white" for="email">Email:</label>
+                  <input type="text" class="form-control" id="email" name="email" required placeholder="Your email Here">
+                </div>
+                <br>
+                <div>
+                    <label class="form-label text-white" for="subject">Subject</label>
+                    <input type="text" class="form-control" id="subject" name="subject" required placeholder="Subject">
+                </div>
+                <br>
+                <div>
+                    <label class="form-label text-white" for="body">Message:</label>
+                    <textarea class="form-control" id="body" name="body" required placeholder="Your Message Here" style="height:200px"></textarea>
+                </div>
+                <div id="submitRow" class="row" style="text-align:center; padding:25px">
+                    <div class="col" style="padding-top:10px">
+                      <button id="submitButton" type="submit" class="btn btn-dark text-white" style="width:175px">Submit</button>
+                    </div>
+                    <div class="col" style="padding-top:10px">
+                      <button type="button" onclick="openInEmail()" class="btn btn-dark text-white" style="width:175px">Open in email</button>
+                    </div>
+                </div>
+                <p id="submitMessage" style="text-align:center;padding-top:20px"></p>
+              </form>
+            </div>
           </div>
         </div>
         <br><br><br><br><br>
@@ -343,10 +348,15 @@
         console.log("Test")
       }
 
+      function submitPressed() {
+
+      }
+
       /*I guess we'll do driver code right here*/
       document.getElementById('contact-form').addEventListener('submit', function(event) {
-        console.log("listener fired")
+        console.log("listener fired at " + performance.now())
         event.preventDefault() //Prevents default form submission
+        console.log("listener fired at " + performance.now())
 
         let form = document.getElementById('contact-form')
         let formData = new FormData(form)
@@ -360,14 +370,18 @@
         submitButton.innerHTML = "Sending..."
 
 
-
+        console.log("fetching send-email")
         //alert("Submit Clicked")
-        fetch('send-email.php', {
+        fetch('./send-email.php', {
           method: 'POST',
           body: formData
-        }).then(response => response.text())
+        }).then(response => {
+          console.log("REsponse received at " + performance.now())
+          return response.text()
+        })
         .then(data => {
           if (data.trim() === 'true') {
+            console.log("Data processed at " + performance.now())
             alert("Your message was sent successfully!")
             submitButton.innerHTML = "Sent!"
             submitMessage.innerHTML = "Message Sent Successfully!";
@@ -375,15 +389,18 @@
             alert("Failed to send your message. Please try again");
             console.log(`Failure Message: ${data.trim()}`)
             submitButton.innerHTML = "Send";
-            submitButton.dissabled = false;
+            submitButton.disabled = false;
             submitMessage.innerHTML = `Failed to send: ${data.trim()}`
-
           }
         })
         .catch(error => {
           alert("An error occured: Please check your console")
           console.error("Error: ", error)
         })
+      })
+
+      document.addEventListener('DOMContentLoaded', function() {
+        document.body.classList.add("loaded");
       })
     </script>
   </body>

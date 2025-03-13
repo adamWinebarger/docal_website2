@@ -10,7 +10,7 @@
 }
 
 .parralax {
-  background-image: url("./images/IMG_0863.webp");
+  background-image: url("./images/IMG_0863_2.jpg");
   /* height:100vh; */
   /* min-height:500px; */
   /* min-height: 100%; */
@@ -28,6 +28,15 @@
   align-items: center;
   color: white;
   text-align: center;
+
+  opacity: 0;
+  animation: fadeIn 2s forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
 }
 
 .mini-parralax {
@@ -56,6 +65,7 @@
   padding: 20px;
   border-radius: 10px;
   margin: 15px;
+  opacity: 1 !important;
 }
 
 
