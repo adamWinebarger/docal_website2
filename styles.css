@@ -109,7 +109,13 @@
   transition: color 0.3s ease;
 }
 
-.card-a-tag:hover {
+.card-a-tag-dark {
+  color: #000;
+  text-decoration:underline;
+  transition: color 0.3s ease;
+}
+
+.card-a-tag:hover, .card-a-tag-dark:hover {
   font-weight: bold;
 
 }
@@ -125,4 +131,19 @@ li {
 
 div {
   scroll-margin-top: 8em;
+}
+
+.card-header-text {
+  font-size: 1.5rem;
+  padding-top:5px;
+  /* font-weight: bold;  */
+}
+
+.nav-link {
+  color:#000;
+}
+
+.nav-link:hover {
+  color:#3e003f;
+  font-weight:bold;
 }
