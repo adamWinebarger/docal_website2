@@ -94,6 +94,18 @@
   font-weight: bold;
 }
 
+.hover-tags {
+  color: rgb(119, 41, 83);
+  text-decoration:underline;
+  transiton: color 0.3s ease; 
+}
+
+.hover-tags:hover {
+  color: rgb(119, 41, 83);
+  text-decoration: underline;
+  font-weight: bold;
+}
+
 .intake-a-tag {
   color: #ffffff;
   transiton: color 0.3s ease;
@@ -146,4 +158,12 @@ div {
 .nav-link:hover {
   color:#3e003f;
   font-weight:bold;
+}
+
+.bg-secondary2 {
+  background-color: #3e003f !important; 
+}
+
+.page-title-heading {
+  font-size: x-large;
 }
